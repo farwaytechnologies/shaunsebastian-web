@@ -1,0 +1,14 @@
+.footer-container {
+  background-color: #0d1117;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.footer-text {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+}
