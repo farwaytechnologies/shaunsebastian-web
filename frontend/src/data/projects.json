@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Social Media Site",
+    "description": "A full-stack social media platform with user profiles, posts, likes, and messaging.",
+    "liveLink": "https://chatbook.pythonanywhere.com/",
+    "githubLink": "https://github.com/Sino24/social-media-site"
+  },
+  {
+    "title": "Indian Postal Site",
+    "description": "Search post offices by pincode or name using JSON API.",
+    "liveLink": "https://oneteampostal.netlify.app/",
+    "githubLink": "https://github.com/Sino24/indian-postal-site"
+  },
+  {
+    "title": "ERP Resource Allocation",
+    "description": "Admin dashboard to manage and allocate resources within an ERP system.",
+    "liveLink": "#",
+    "githubLink": "https://github.com/Sino24/resource-allocation-erp"
+  }
+]
