@@ -26,18 +26,18 @@ function About() {
       <section className="about-section">
         <h3 className="about-heading">Personal Information</h3>
         <ul className="about-list">
-          <li><strong>Date of Birth:</strong> {aboutData.dob}</li>
-          <li><strong>Blood Group:</strong> {aboutData.bloodGroup}</li>
-          <li><strong>Gender:</strong> {aboutData.gender}</li>
-          <li><strong>Status:</strong> {aboutData.status}</li>
-          <li><strong>Languages:</strong> {aboutData.languages.join(', ')}</li>
+          <li><strong>Date of Birth:</strong> {aboutData.personalInfo.dob}</li>
+          <li><strong>Blood Group:</strong> {aboutData.personalInfo.bloodGroup}</li>
+          <li><strong>Gender:</strong> {aboutData.personalInfo.gender}</li>
+          <li><strong>Status:</strong> {aboutData.personalInfo.status}</li>
+          <li><strong>Languages:</strong> {aboutData.personalInfo.languages.join(', ')}</li>
         </ul>
       </section>
 
       <section className="about-section">
         <h3 className="about-heading">Core Skills</h3>
         <ul className="about-list">
-          {aboutData.skills.map((skill, idx) => (
+          {aboutData.coreSkills.map((skill, idx) => (
             <li key={idx}>{skill}</li>
           ))}
         </ul>
@@ -48,7 +48,7 @@ function About() {
         <ul className="about-list">
           {aboutData.experience.map((exp, idx) => (
             <li key={idx}>
-              <strong>{exp.title} ({exp.year}):</strong> {exp.company}
+              <strong>{exp.role} at {exp.company} ({exp.year}):</strong> {exp.description}
             </li>
           ))}
         </ul>
@@ -58,7 +58,9 @@ function About() {
         <h3 className="about-heading">Education</h3>
         <ul className="about-list">
           {aboutData.education.map((edu, idx) => (
-            <li key={idx}>{edu}</li>
+            <li key={idx}>
+              <strong>{edu.degree}</strong> at {edu.institution} ({edu.duration})
+            </li>
           ))}
         </ul>
       </section>
@@ -67,26 +69,34 @@ function About() {
         <h3 className="about-heading">Featured Projects</h3>
         <ul className="about-list">
           {aboutData.projects.map((proj, idx) => (
-            <li key={idx}><strong>{proj.split(':')[0]}:</strong>{proj.split(':')[1]}</li>
+            <li key={idx}>
+              <strong>{proj.name}:</strong> {proj.description}
+            </li>
           ))}
         </ul>
       </section>
 
       <section className="about-section">
-        <h3 className="about-heading">Achievements & Certifications</h3>
+        <h3 className="about-heading">Achievements</h3>
         <ul className="about-list">
           {aboutData.achievements.map((ach, idx) => (
             <li key={idx}>{ach}</li>
           ))}
-          <li>
-            <strong>Certifications:</strong> {aboutData.certifications.join(', ')}
-          </li>
+        </ul>
+      </section>
+
+      <section className="about-section">
+        <h3 className="about-heading">Certifications</h3>
+        <ul className="about-list">
+          {aboutData.certifications.map((cert, idx) => (
+            <li key={idx}>{cert}</li>
+          ))}
         </ul>
       </section>
 
       <section className="about-section">
         <h3 className="about-heading">About Me</h3>
-        <p className="about-description">{aboutData.bio}</p>
+        <p className="about-description">{aboutData.aboutMe}</p>
       </section>
     </div>
   );

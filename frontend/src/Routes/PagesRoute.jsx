@@ -9,6 +9,7 @@ import Contact from '../Pages/Contact';
 
 import AdminAuth from '../Admin/AdminAuth';
 import AdminDashboard from '../Admin/AdminDashboard';
+import AdminManageAbout from '../Admin/ AdminManageAbout'
 
 
 function PagesRoute() {
@@ -20,6 +21,7 @@ function PagesRoute() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="/admin/login" element={<AdminAuth/>} />
+      <Route path="/admin/manage-about" element={<AdminManageAbout/>} />
     </Routes>
   );
 }

@@ -48,7 +48,7 @@ function AdminDashboard() {
         <nav>
           <ul>
             <li><Link to="/admin/dashboard">Dashboard</Link></li>
-            <li><Link to="/admin/manage-users">Manage Users</Link></li>
+            <li><Link to="/admin/manage-about">Manage about</Link></li>
             <li><Link to="/admin/manage-services">Manage Services</Link></li>
             <li><Link to="/admin/messages">Messages</Link></li>
           </ul>
