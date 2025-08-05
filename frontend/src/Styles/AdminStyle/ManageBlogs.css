@@ -1,0 +1,76 @@
+.manage-blogs-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.manage-blogs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.manage-blogs-form input,
+.manage-blogs-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.manage-blogs-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.manage-blogs-form button:hover {
+  background-color: #0056b3;
+}
+
+.manage-blogs-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.manage-blogs-card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  align-items: center;
+}
+
+.manage-blogs-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.manage-blogs-info {
+  flex-grow: 1;
+}
+
+.manage-blogs-actions button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.manage-blogs-actions button:first-child {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.manage-blogs-actions button:last-child {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}

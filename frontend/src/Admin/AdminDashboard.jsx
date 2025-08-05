@@ -87,20 +87,24 @@ function AdminDashboard() {
           </div>
         </div>
 
-        <nav className="admin-dashboard-nav">
-          <Link to="/admin/dashboard" className="admin-dashboard-nav-link">
-            📊 Dashboard
-          </Link>
-          <Link to="/admin/manage-about" className="admin-dashboard-nav-link">
-            ℹ️ Manage About
-          </Link>
-          <Link to="/admin/manage-services" className="admin-dashboard-nav-link">
-            ⚙️ Manage Services
-          </Link>
-          <Link to="/admin/messages" className="admin-dashboard-nav-link">
-            💬 Messages
-          </Link>
-        </nav>
+      <nav className="admin-dashboard-nav">
+  <Link to="/admin/dashboard" className="admin-dashboard-nav-link">
+    📊 Dashboard
+  </Link>
+  <Link to="/admin/manage-about" className="admin-dashboard-nav-link">
+    ℹ️ Manage About
+  </Link>
+  <Link to="/admin/manage-services" className="admin-dashboard-nav-link">
+    ⚙️ Manage Services
+  </Link>
+  <Link to="/admin/messages" className="admin-dashboard-nav-link">
+    💬 Messages
+  </Link>
+  <Link to="/admin/manage-blogs" className="admin-dashboard-nav-link">
+    📝 Manage Blogs
+  </Link>
+</nav>
+
 
         <div className="admin-dashboard-footer">
           <button onClick={handleLogout} className="admin-dashboard-logout-btn">

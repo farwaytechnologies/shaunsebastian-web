@@ -10,6 +10,9 @@ import Contact from '../Pages/Contact';
 import AdminAuth from '../Admin/AdminAuth';
 import AdminDashboard from '../Admin/AdminDashboard';
 import AdminManageAbout from '../Admin/ AdminManageAbout'
+import Blog from '../Pages/Blog';
+import BlogDetail from '../Pages/BlogDetail';
+import ManageBlogs from '../Admin/AdminManageBlogs';
 
 
 function PagesRoute() {
@@ -22,6 +25,9 @@ function PagesRoute() {
       <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="/admin/login" element={<AdminAuth/>} />
       <Route path="/admin/manage-about" element={<AdminManageAbout/>} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:id" element={<BlogDetail />} />
+      <Route path="/admin/manage-blogs" element={<ManageBlogs />} /> {/* Admin Route */}
     </Routes>
   );
 }

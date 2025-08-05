@@ -18,6 +18,7 @@ const Navbar = () => {
         <li><Link to="/" className="navbar-link">Home</Link></li>
         <li><Link to="/about" className="navbar-link">About</Link></li>
         <li><Link to="/projects" className="navbar-link">Projects</Link></li>
+         <li><Link to="/blog" className="navbar-link">Blog</Link></li>
         <li><Link to="/contact" className="navbar-link">Contact</Link></li>
         {adminToken && (
           <>
