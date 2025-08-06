@@ -7,8 +7,9 @@ const connectDB = require('./config/db');
 const adminRoutes = require('./routes/adminRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
 const blogRoutes = require('./routes/blogRoutes');
-const contactRoutes = require('./routes/contactRoutes');  // <-- Added Contact Routes
-
+const contactRoutes = require('./routes/contactRoutes');
+const bookRoutes = require('./routes/bookRoutes');  // <-- Added Book Routes
+const topicRoutes = require('./routes/topicRoutes');
 dotenv.config();
 
 const app = express();
@@ -24,7 +25,9 @@ app.use(express.json());
 app.use('/api/admin', adminRoutes);
 app.use('/api/about', aboutRoutes);
 app.use('/api/blogs', blogRoutes);
-app.use('/api/contact', contactRoutes);  // <-- Register Contact API
+app.use('/api/contact', contactRoutes);
+app.use('/api/books', bookRoutes);  // <-- Register Books API
+app.use('/api/topics', topicRoutes);
 
 // Health Check Route
 app.get('/', (req, res) => {

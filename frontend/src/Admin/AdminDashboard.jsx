@@ -19,7 +19,7 @@ function AdminDashboard() {
       try {
         setLoading(true);
         const response = await fetch('http://localhost:8000/api/admin/profile', {
-          headers: { 
+          headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
           },
@@ -30,17 +30,7 @@ function AdminDashboard() {
         }
 
         const data = await response.json();
-        console.log('Admin data received:', data); // Debug log
-        
-        // Handle different possible response structures
-        if (data.admin) {
-          setAdmin(data.admin);
-        } else if (data.name || data.email) {
-          setAdmin(data);
-        } else {
-          console.error('Unexpected response structure:', data);
-          setAdmin({ name: 'Admin', email: 'admin@example.com' }); // Fallback
-        }
+        setAdmin(data.admin || { name: 'Admin', email: 'admin@example.com' });
       } catch (err) {
         console.error('Error fetching admin data:', err);
         setError(err.message);
@@ -75,36 +65,26 @@ function AdminDashboard() {
           <h2>Admin Panel</h2>
         </div>
 
-        {/* Admin Profile Section */}
         <div className="admin-dashboard-profile">
           <div className="admin-dashboard-avatar">
             <span>{admin?.name?.charAt(0) || 'A'}</span>
           </div>
           <div className="admin-dashboard-info">
-            <h3>{admin?.name || 'Admin'}</h3>
-            <p>{admin?.email || 'Loading...'}</p>
+            <h3>{admin?.name}</h3>
+            <p>{admin?.email}</p>
             <span className="admin-dashboard-role">Administrator</span>
           </div>
         </div>
 
-      <nav className="admin-dashboard-nav">
-  <Link to="/admin/dashboard" className="admin-dashboard-nav-link">
-    📊 Dashboard
-  </Link>
-  <Link to="/admin/manage-about" className="admin-dashboard-nav-link">
-    ℹ️ Manage About
-  </Link>
-  <Link to="/admin/manage-services" className="admin-dashboard-nav-link">
-    ⚙️ Manage Services
-  </Link>
-  <Link to="/admin/messages" className="admin-dashboard-nav-link">
-    💬 Messages
-  </Link>
-  <Link to="/admin/manage-blogs" className="admin-dashboard-nav-link">
-    📝 Manage Blogs
-  </Link>
-</nav>
-
+        <nav className="admin-dashboard-nav">
+          <Link to="/admin/dashboard" className="admin-dashboard-nav-link">📊 Dashboard</Link>
+          <Link to="/admin/manage-about" className="admin-dashboard-nav-link">ℹ️ Manage About</Link>
+          <Link to="/admin/manage-services" className="admin-dashboard-nav-link">⚙️ Manage Services</Link>
+          <Link to="/admin/messages" className="admin-dashboard-nav-link">💬 Messages</Link>
+          <Link to="/admin/manage-blogs" className="admin-dashboard-nav-link">📝 Manage Blogs</Link>
+          <Link to="/admin/manage-books" className="admin-dashboard-nav-link">📚 Manage Books</Link>
+          <Link to="/admin/manage-topics" className="admin-dashboard-nav-link">📄 Manage Topics</Link>
+        </nav>
 
         <div className="admin-dashboard-footer">
           <button onClick={handleLogout} className="admin-dashboard-logout-btn">
@@ -118,16 +98,16 @@ function AdminDashboard() {
         <header className="admin-dashboard-top-header">
           <div className="admin-dashboard-header-left">
             <h1>Dashboard</h1>
-            <p>Welcome back, {admin?.name || 'Admin'}!</p>
+            <p>Welcome back, {admin?.name}!</p>
           </div>
           <div className="admin-dashboard-header-right">
             <div className="admin-dashboard-user-info">
               <div className="admin-dashboard-user-avatar">
-                {admin?.name?.charAt(0) || 'A'}
+                {admin?.name?.charAt(0)}
               </div>
               <div className="admin-dashboard-user-details">
-                <span className="admin-dashboard-user-name">{admin?.name || 'Loading...'}</span>
-                <span className="admin-dashboard-user-email">{admin?.email || ''}</span>
+                <span className="admin-dashboard-user-name">{admin?.name}</span>
+                <span className="admin-dashboard-user-email">{admin?.email}</span>
               </div>
             </div>
           </div>
@@ -153,25 +133,37 @@ function AdminDashboard() {
             <div className="admin-dashboard-card">
               <h3>Manage About</h3>
               <p>Edit and update your about page content and company information.</p>
-              <Link to="/admin/manage-about" className="admin-dashboard-card-link">
-                Manage Content
-              </Link>
+              <Link to="/admin/manage-about" className="admin-dashboard-card-link">Manage Content</Link>
             </div>
 
             <div className="admin-dashboard-card">
               <h3>Services Management</h3>
               <p>Add, edit, or remove services and update descriptions.</p>
-              <Link to="/admin/manage-services" className="admin-dashboard-card-link">
-                Manage Services
-              </Link>
+              <Link to="/admin/manage-services" className="admin-dashboard-card-link">Manage Services</Link>
             </div>
 
             <div className="admin-dashboard-card">
               <h3>Contact Messages</h3>
               <p>View and respond to customer inquiries and feedback.</p>
-              <Link to="/admin/messages" className="admin-dashboard-card-link">
-                View Messages
-              </Link>
+              <Link to="/admin/messages" className="admin-dashboard-card-link">View Messages</Link>
+            </div>
+
+            <div className="admin-dashboard-card">
+              <h3>Manage Blogs</h3>
+              <p>Create, edit, and delete blog posts.</p>
+              <Link to="/admin/manage-blogs" className="admin-dashboard-card-link">Manage Blogs</Link>
+            </div>
+
+            <div className="admin-dashboard-card">
+              <h3>Manage Books</h3>
+              <p>Add, edit, and delete books and their information.</p>
+              <Link to="/admin/manage-books" className="admin-dashboard-card-link">Manage Books</Link>
+            </div>
+
+            <div className="admin-dashboard-card">
+              <h3>Manage Topics</h3>
+              <p>Create, edit, and delete topics list.</p>
+              <Link to="/admin/manage-topics" className="admin-dashboard-card-link">Manage Topics</Link>
             </div>
           </div>
 
@@ -182,7 +174,7 @@ function AdminDashboard() {
           )}
         </section>
 
-        <Outlet />
+        <Outlet /> {/* For Nested Routes like /admin/manage-topics */}
       </main>
     </div>
   );

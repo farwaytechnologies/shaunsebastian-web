@@ -13,6 +13,10 @@ import AdminManageAbout from '../Admin/ AdminManageAbout'
 import Blog from '../Pages/Blog';
 import BlogDetail from '../Pages/BlogDetail';
 import ManageBlogs from '../Admin/AdminManageBlogs';
+import Books from '../Pages/Books';
+import ManageBooks from '../Admin/AdminManageBooks';
+import Topic from '../Pages/Topic';
+import ManageTopics from '../Admin/AdminManageTopics';
 
 
 function PagesRoute() {
@@ -28,6 +32,10 @@ function PagesRoute() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:id" element={<BlogDetail />} />
       <Route path="/admin/manage-blogs" element={<ManageBlogs />} /> {/* Admin Route */}
+      <Route path="/books" element={<Books />} />
+      <Route path="/admin/manage-books" element={<ManageBooks />} />
+      <Route path="/topics" element={<Topic/>} />
+      <Route path="/admin/manage-topics" element={<ManageTopics/>} />
     </Routes>
   );
 }
