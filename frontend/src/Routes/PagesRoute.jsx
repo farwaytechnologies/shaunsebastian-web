@@ -17,6 +17,7 @@ import Books from '../Pages/Books';
 import ManageBooks from '../Admin/AdminManageBooks';
 import Topic from '../Pages/Topic';
 import ManageTopics from '../Admin/AdminManageTopics';
+import AdminManageProjects from '../Admin/AdminManageProjects';
 
 
 function PagesRoute() {
@@ -36,6 +37,8 @@ function PagesRoute() {
       <Route path="/admin/manage-books" element={<ManageBooks />} />
       <Route path="/topics" element={<Topic/>} />
       <Route path="/admin/manage-topics" element={<ManageTopics/>} />
+      <Route path="/admin/manage-projects" element={<AdminManageProjects/>} />
+
     </Routes>
   );
 }

@@ -25,9 +25,7 @@ function AdminDashboard() {
           },
         });
 
-        if (!response.ok) {
-          throw new Error('Unauthorized or session expired');
-        }
+        if (!response.ok) throw new Error('Unauthorized or session expired');
 
         const data = await response.json();
         setAdmin(data.admin || { name: 'Admin', email: 'admin@example.com' });
@@ -84,6 +82,7 @@ function AdminDashboard() {
           <Link to="/admin/manage-blogs" className="admin-dashboard-nav-link">📝 Manage Blogs</Link>
           <Link to="/admin/manage-books" className="admin-dashboard-nav-link">📚 Manage Books</Link>
           <Link to="/admin/manage-topics" className="admin-dashboard-nav-link">📄 Manage Topics</Link>
+          <Link to="/admin/manage-projects" className="admin-dashboard-nav-link">💻 Manage Projects</Link> {/* NEW */}
         </nav>
 
         <div className="admin-dashboard-footer">
@@ -114,21 +113,7 @@ function AdminDashboard() {
         </header>
 
         <section className="admin-dashboard-content">
-          <div className="admin-dashboard-stats">
-            <div className="admin-dashboard-stat-card">
-              <h3>About Page</h3>
-              <p>Manage content</p>
-            </div>
-            <div className="admin-dashboard-stat-card">
-              <h3>Services</h3>
-              <p>5 Active</p>
-            </div>
-            <div className="admin-dashboard-stat-card">
-              <h3>Messages</h3>
-              <p>12 New</p>
-            </div>
-          </div>
-
+        
           <div className="admin-dashboard-cards">
             <div className="admin-dashboard-card">
               <h3>Manage About</h3>
@@ -165,6 +150,12 @@ function AdminDashboard() {
               <p>Create, edit, and delete topics list.</p>
               <Link to="/admin/manage-topics" className="admin-dashboard-card-link">Manage Topics</Link>
             </div>
+
+            <div className="admin-dashboard-card">
+              <h3>Manage Projects</h3>
+              <p>Add, edit, and delete frontend development projects.</p>
+              <Link to="/admin/manage-projects" className="admin-dashboard-card-link">Manage Projects</Link>
+            </div>
           </div>
 
           {error && (
@@ -174,7 +165,7 @@ function AdminDashboard() {
           )}
         </section>
 
-        <Outlet /> {/* For Nested Routes like /admin/manage-topics */}
+        <Outlet />
       </main>
     </div>
   );
