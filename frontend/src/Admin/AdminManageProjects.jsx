@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/AdminStyle/AdminManageProjects.css';
+import '../Styles/AdminStyle/AdminManageProjects.css';
 
 function AdminManageProjects() {
   const [projects, setProjects] = useState([]);

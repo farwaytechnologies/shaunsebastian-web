@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Styles/AdminStyle/ ManageBooks.css';
+import '../Styles/AdminStyle/ManageBooks.css';
 
 function ManageBooks() {
   const [books, setBooks] = useState([]);
