@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/PagesStyle/About.css';
+import '../Styles/PagesStyle/About.css';
 
 function About() {
   const [aboutData, setAboutData] = useState(null);

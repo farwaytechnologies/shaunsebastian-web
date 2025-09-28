@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import '../styles/PagesStyle/Projects.css';
+import '../Styles/PagesStyle/Projects.css';
 
 function Projects() {
   const [projects, setProjects] = useState([]);
