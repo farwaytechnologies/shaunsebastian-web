@@ -5,12 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
 
   server: {
-    // This allows binding to the necessary network interface (0.0.0.0)
     host: '0.0.0.0',
-
-    // This resolves the "Blocked request" error by allowing all hosts
-    allowedHosts: '*'},
-
+    allowedHosts: [
+      'shaunsebastian-web-ewoi.onrender.com'
+    ]
+  },
 
   plugins: [react()],
 
