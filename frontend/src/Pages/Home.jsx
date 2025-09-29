@@ -12,8 +12,8 @@ function Home() {
           </div>
           <h1 className="hero-name">Shaun Sebastian</h1>
           <p className="hero-title">Full Stack Developer & Cyber Security Expert</p>
-          <a href="mailto:shaunsebastian4@gmail.com" className="hero-email">
-            shaunsebastian4@gmail.com
+          <a href="mailto:mail@shaunsebastian.in" className="hero-email">
+            mail@shaunsebastian.in
           </a>
         </div>
         <div className="hero-background"></div>
@@ -21,7 +21,7 @@ function Home() {
 
       {/* Main Content Grid */}
       <div className="content-grid">
-        
+
         {/* Personal Info Card */}
         <section className="card personal-card">
           <div className="card-header">
@@ -162,7 +162,7 @@ function Home() {
                 <span>1st Place - Swastika '15 Inter College Techno Cultural Fest - Scien EX 2015</span>
               </div>
             </div>
-            
+
             <div className="certification-section">
               <h3>Key Certifications</h3>
               <div className="cert-grid">
@@ -184,8 +184,8 @@ function Home() {
           </div>
           <div className="card-content">
             <p>
-              Apart from being a computer engineer, I enjoy most of my time exploring technology. 
-              I follow sci-fi and fantasy genre movies and spend a large amount of my free time 
+              Apart from being a computer engineer, I enjoy most of my time exploring technology.
+              I follow sci-fi and fantasy genre movies and spend a large amount of my free time
               exploring the latest technology advancements in the programming world.
             </p>
           </div>

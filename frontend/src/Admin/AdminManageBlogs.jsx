@@ -17,7 +17,7 @@ function ManageBlogs() {
   }, []);
 
   const fetchBlogs = async () => {
-    const res = await fetch('http://localhost:8000/api/blogs');
+    const res = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/blogs');
     const data = await res.json();
     setBlogs(data);
   };
@@ -29,13 +29,13 @@ function ManageBlogs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isEditing) {
-      await fetch(`http://localhost:8000/api/blogs/${editId}`, {
+      await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/blogs/${editId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
     } else {
-      await fetch('http://localhost:8000/api/blogs', {
+      await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/blogs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -60,7 +60,7 @@ function ManageBlogs() {
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this blog?')) {
-      await fetch(`http://localhost:8000/api/blogs/${id}`, {
+      await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/blogs/${id}`, {
         method: 'DELETE'
       });
       fetchBlogs();

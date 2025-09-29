@@ -21,8 +21,8 @@ function AdminAuth() {
     }
 
     const endpoint = isSignup
-      ? 'http://localhost:8000/api/admin/signup'
-      : 'http://localhost:8000/api/admin/login';
+      ? 'https://shaunsebastian-web-pwzl.onrender.com/api/admin/signup'
+      : 'https://shaunsebastian-web-pwzl.onrender.com/api/admin/login';
 
     const payload = { email, password };
 

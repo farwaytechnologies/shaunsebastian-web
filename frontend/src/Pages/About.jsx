@@ -5,7 +5,7 @@ function About() {
   const [aboutData, setAboutData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/about')
+    fetch('https://shaunsebastian-web-pwzl.onrender.com/api/about')
       .then(res => res.json())
       .then(data => setAboutData(data))
       .catch(err => console.error('Failed to fetch about data:', err));

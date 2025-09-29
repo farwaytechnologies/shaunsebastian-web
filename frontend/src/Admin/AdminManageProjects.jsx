@@ -11,7 +11,7 @@ function AdminManageProjects() {
   });
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = 'http://localhost:8000/api/projects';
+  const API_URL = 'https://shaunsebastian-web-pwzl.onrender.com/api/projects';
 
   // Fetch all projects
   const fetchProjects = async () => {

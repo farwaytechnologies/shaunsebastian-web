@@ -18,7 +18,7 @@ function AdminDashboard() {
 
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:8000/api/admin/profile', {
+        const response = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/admin/profile', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ function AdminDashboard() {
         if (!response.ok) throw new Error('Unauthorized or session expired');
 
         const data = await response.json();
-        setAdmin(data.admin || { name: 'Admin', email: 'admin@example.com' });
+        setAdmin(data.admin || { name: 'Admin', email: 'mail@shaunsebastian.in' });
       } catch (err) {
         console.error('Error fetching admin data:', err);
         setError(err.message);
@@ -113,7 +113,7 @@ function AdminDashboard() {
         </header>
 
         <section className="admin-dashboard-content">
-        
+
           <div className="admin-dashboard-cards">
             <div className="admin-dashboard-card">
               <h3>Manage About</h3>

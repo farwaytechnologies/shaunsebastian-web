@@ -16,7 +16,7 @@ function ManageBooks() {
   }, []);
 
   const fetchBooks = async () => {
-    const res = await fetch('http://localhost:8000/api/books');
+    const res = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/books');
     const data = await res.json();
     setBooks(data);
   };

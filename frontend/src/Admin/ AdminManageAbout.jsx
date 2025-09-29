@@ -23,7 +23,7 @@ function AdminManageAbout() {
   });
 
   const fetchAboutData = () => {
-    fetch('http://localhost:8000/api/about')
+    fetch('https://shaunsebastian-web-pwzl.onrender.com/api/about')
       .then(res => res.json())
       .then(data => {
         if (data) {
@@ -83,7 +83,7 @@ function AdminManageAbout() {
       projects: JSON.parse(aboutData.projects)
     };
 
-    fetch('http://localhost:8000/api/about', {
+    fetch('https://shaunsebastian-web-pwzl.onrender.com/api/about', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

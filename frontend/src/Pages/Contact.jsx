@@ -21,7 +21,7 @@ function Contact() {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:8000/api/contact/submit', {
+      const res = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ function Contact() {
 
       <div className="contact-container">
         <div className="contact-info">
-          <p><strong>Email:</strong> shaunsebastian4@gmail.com</p>
+          <p><strong>Email:</strong> mail@shaunsebastian.in</p>
           <p><strong>Phone:</strong> +91-9876543210</p>
           <p><strong>Location:</strong> Kerala, India</p>
         </div>

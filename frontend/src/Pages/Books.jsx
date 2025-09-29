@@ -6,7 +6,7 @@ function Books() {
 
   useEffect(() => {
     // Fetch from API — For now using static data
-    fetch('http://localhost:8000/api/books')
+    fetch('https://shaunsebastian-web-pwzl.onrender.com/api/books')
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(err => console.error(err));
