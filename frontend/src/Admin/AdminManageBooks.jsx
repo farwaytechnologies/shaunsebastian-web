@@ -29,14 +29,14 @@ function ManageBooks() {
     e.preventDefault();
     if (editId) {
       // Update Book
-      await fetch(`http://localhost:8000/api/books/${editId}`, {
+      await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/books/${editId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
     } else {
       // Add New Book
-      await fetch('http://localhost:8000/api/books', {
+      await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/books', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -58,7 +58,7 @@ function ManageBooks() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:8000/api/books/${id}`, {
+    await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/books/${id}`, {
       method: 'DELETE',
     });
     fetchBooks();
