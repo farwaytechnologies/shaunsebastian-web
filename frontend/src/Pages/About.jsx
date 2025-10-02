@@ -20,7 +20,7 @@ function About() {
       <section className="about-section">
         <h3 className="about-heading">{aboutData.name}</h3>
         <p className="about-subtitle">{aboutData.title}</p>
-        <p className="about-email">📧 {aboutData.email}</p>
+        <p className="about-email">{aboutData.email}</p>
       </section>
 
       <section className="about-section">

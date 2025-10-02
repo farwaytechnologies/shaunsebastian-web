@@ -58,6 +58,7 @@ function Home() {
             <div className="language-tags">
               <span className="language-tag">English</span>
               <span className="language-tag">Malayalam</span>
+              <span className="language-tag">Tamil</span>
             </div>
           </div>
         </section>
@@ -201,7 +202,7 @@ function Home() {
               <a href="#" className="connect-link social">
                 <span>Social Media</span>
               </a>
-              <a href="#" className="connect-link github">
+              <a href="https://github.com/shaunsebastian" className="connect-link github">
                 <span>GitHub</span>
               </a>
             </div>
