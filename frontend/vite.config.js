@@ -8,6 +8,7 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: [
       'shaunsebastian-web-ewoi.onrender.com',
+      'ss-frontend-lyiu.onrender.com',
       'shaunsebastian.in'
     ]
   },

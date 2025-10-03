@@ -49,7 +49,9 @@ function Contact() {
         <div className="contact-info">
           <p><strong>Email:</strong> mail@shaunsebastian.in</p>
           <p><strong>Phone:</strong> +91-9876543210</p>
-          <p><strong>Location:</strong> Kerala, India</p>
+          <p><strong>Location:</strong> </p>
+          <p><strong>Kerala, India</strong></p>
+          <p><strong>Bengaluru, Karnataka</strong></p>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
