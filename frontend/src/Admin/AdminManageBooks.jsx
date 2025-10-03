@@ -16,7 +16,7 @@ function ManageBooks() {
   }, []);
 
   const fetchBooks = async () => {
-    const res = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/books');
+    const res = await fetch('https://ss-backend-7arm.onrender.com/api/books');
     const data = await res.json();
     setBooks(data);
   };
@@ -29,14 +29,14 @@ function ManageBooks() {
     e.preventDefault();
     if (editId) {
       // Update Book
-      await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/books/${editId}`, {
+      await fetch(`https://ss-backend-7arm.onrender.com/api/books/${editId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
     } else {
       // Add New Book
-      await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/books', {
+      await fetch('https://ss-backend-7arm.onrender.com/api/books', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -58,7 +58,7 @@ function ManageBooks() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/books/${id}`, {
+    await fetch(`https://ss-backend-7arm.onrender.com/api/books/${id}`, {
       method: 'DELETE',
     });
     fetchBooks();

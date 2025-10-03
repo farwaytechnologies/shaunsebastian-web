@@ -12,7 +12,7 @@ function ManageTopics() {
 
   const fetchTopics = async () => {
     try {
-      const response = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/topics');
+      const response = await fetch('https://ss-backend-7arm.onrender.com/api/topics');
       const data = await response.json();
       setTopics(data);
     } catch (error) {
@@ -29,7 +29,7 @@ function ManageTopics() {
     if (editingId) {
       // Update Topic
       try {
-        const response = await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/topics/${editingId}`, {
+        const response = await fetch(`https://ss-backend-7arm.onrender.com/api/topics/${editingId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -46,7 +46,7 @@ function ManageTopics() {
     } else {
       // Add Topic
       try {
-        const response = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/topics', {
+        const response = await fetch('https://ss-backend-7arm.onrender.com/api/topics', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -71,7 +71,7 @@ function ManageTopics() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this topic?')) {
       try {
-        const response = await fetch(`https://shaunsebastian-web-pwzl.onrender.com/api/topics/${id}`, {
+        const response = await fetch(`https://ss-backend-7arm.onrender.com/api/topics/${id}`, {
           method: 'DELETE'
         });
         if (response.ok) {

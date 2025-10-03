@@ -18,7 +18,7 @@ function AdminDashboard() {
 
       try {
         setLoading(true);
-        const response = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/admin/profile', {
+        const response = await fetch('https://ss-backend-7arm.onrender.com/api/admin/profile', {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ function Blog() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch('https://shaunsebastian-web-pwzl.onrender.com/api/blogs')
+    fetch('https://ss-backend-7arm.onrender.com/api/blogs')
       .then(res => res.json())
       .then(data => setBlogs(data))
       .catch(err => console.error(err));

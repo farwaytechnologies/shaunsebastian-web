@@ -10,7 +10,7 @@ function Topic() {
 
   const fetchTopics = async () => {
     try {
-      const response = await fetch('https://shaunsebastian-web-pwzl.onrender.com/api/topics');
+      const response = await fetch('https://ss-backend-7arm.onrender.com/api/topics');
       if (!response.ok) {
         throw new Error('Failed to fetch topics');
       }

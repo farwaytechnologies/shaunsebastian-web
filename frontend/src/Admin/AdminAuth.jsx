@@ -21,8 +21,8 @@ function AdminAuth() {
     }
 
     const endpoint = isSignup
-      ? 'https://shaunsebastian-web-pwzl.onrender.com/api/admin/signup'
-      : 'https://shaunsebastian-web-pwzl.onrender.com/api/admin/login';
+      ? 'https://ss-backend-7arm.onrender.com/api/admin/signup'
+      : 'https://ss-backend-7arm.onrender.com/api/admin/login';
 
     const payload = { email, password };
 
